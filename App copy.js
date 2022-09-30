@@ -28,24 +28,33 @@ const App = () => {
     //création de la NavigationContainer
     <NavigationContainer>
 
-      {/*création de la Tab.Navigator. */}
-     <Tab.Navigator
+      {/*création de la Stack.Navigator. */}
+     <Stack.Navigator
 
+      /* création de screenOptions*/
+      /*screenOptions={{
+        header:()=> null
+      }} */
      >
-       {/*création de la Tab.Screen A */}
-       <Tab.Screen 
+     
+      {/*création de la Stack.Screen A */}
+       <Stack.Screen 
        name="Screen_A" 
        component={ScreenA}
 
-      />
+       /*création de l'option. */ 
+       options={{
+        header:()=> null
+       }}
+       />
       
-       {/*création de la Tab.Screen B */}
-       <Tab.Screen 
+       {/*création de la Stack.Screen B */}
+       <Stack.Screen 
        name="Screen_B" 
        component={ScreenB}
        />
 
-     </Tab.Navigator>
+     </Stack.Navigator>
     </NavigationContainer>
     
   )
